@@ -6,9 +6,18 @@ import { BrowserRouter } from "react-router-dom";
 
 import "./i18n";
 import Loading from "./components/Loading.jsx";
+import ReactGA from "react-ga4";
+
+ReactGA.initialize("G-0ZVLSMJB72");
+
+ReactGA.send({
+  hitType: "pageview",
+  page: window.location.pathname,
+  title: "page-view",
+});
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <Suspense fallback={<Loading/>}>
+  <Suspense fallback={<Loading />}>
     <BrowserRouter>
       <App />
     </BrowserRouter>
