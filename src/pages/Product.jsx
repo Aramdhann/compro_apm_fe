@@ -10,6 +10,7 @@ import logo_iso from "../assets/iso_logo.svg";
 import logo_kominfo from "../assets/kominfo_logo.svg";
 import FraudNav from "../components/FraudNav";
 import { useTranslation } from "react-i18next";
+import axios from "axios";
 // import bg from "../assets/bg_product.svg";
 
 const Product = () => {
@@ -29,6 +30,25 @@ const Product = () => {
   const [salary, setSalary] = useState("");
   const [rawValueSalary, setRawValueSalary] = useState("");
   const [showInputRequired, setShowInputRequired] = useState(false);
+
+  const sendDataToBackend = () => {
+    const formData = {
+      salary: rawValueSalary,
+      loan: value,
+      tenor: tenor,
+    };
+
+    console.log("Sending data to backend:", formData);
+
+    axios
+      .post(`${import.meta.env.VITE_API_URL}simulation-product/post/all`, formData)
+      .then((res) => {
+        console.log("Data sent successfully: ", res.data);
+      })
+      .catch((error) => {
+        console.log("Sending data error:", error);
+      });
+  };
 
   const formatCurrency = (value) => {
     return new Intl.NumberFormat("id-ID", {
@@ -70,6 +90,7 @@ const Product = () => {
       setShowInputRequired(false);
       calculateInterest();
       setShowRepayment(true);
+      sendDataToBackend();
     }
   };
 
@@ -89,7 +110,7 @@ const Product = () => {
 
     setRawValueSalary(numericValue);
     setSalary(`Rp. ${formattedWithDot}`);
-    console.log("salary: ",salary)
+    console.log("salary: ", salary);
   };
 
   const isSalaryEmpty = () => {
