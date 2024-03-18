@@ -18,8 +18,7 @@ const FraudNav = () => {
             <p className="py-1 text-xs md:text-base">
               <Trans i18nKey="fraud">
                 <strong>Hindari penipuan!</strong> selalu gunakan aplikasi resmi
-                Cashcepat yang
-                <strong> di Google Playstore</strong>. Hanya gunakan VA yang
+                Cashcepat yang ada <strong> di Google Playstore</strong>. Hanya gunakan VA yang
                 tertera di aplikasi Cashcepat untuk seluruh transaksi pembayaran
                 Anda.
               </Trans>
