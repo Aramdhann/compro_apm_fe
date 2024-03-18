@@ -240,6 +240,56 @@ const Contact = () => {
                 {t("serviceHour.title-2")}
               </p>
               <form className="flex flex-col gap-4">
+                <div>
+                  <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    {t("serviceHour.name")}
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    className="input input-bordered input-secondary w-full"
+                    placeholder={t("serviceHour.type")}
+                    required
+                  />
+                  <span className="text-sm">{errors.name}</span>
+                </div>
+                <div>
+                  <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    {t("serviceHour.phone")}
+                  </label>
+                  <input
+                    id="phoneNumber"
+                    name="phoneNumber"
+                    value={formData.phoneNumber}
+                    onChange={handleInputChange}
+                    className="input input-bordered input-secondary w-full"
+                    placeholder="example: 08xx"
+                    required
+                  />
+                  <span className="text-sm">{errors.phoneNumber}</span>
+                </div>
+                <div>
+                  <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    className="input input-bordered input-secondary w-full"
+                    placeholder="example: mail@gmail.com"
+                    required
+                  />
+                  <span className="text-sm">{errors.email}</span>
+                </div>
+                <label className="block text-sm font-medium text-gray-900 dark:text-white">
+                  {t("serviceHour.message")}
+                </label>
                 <div className="dropdown">
                   <label
                     tabIndex={0}
@@ -297,56 +347,6 @@ const Contact = () => {
                   <span className="text-red-500">{dropdownError}</span>
                 )}
                 <div>
-                  <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                    {t("serviceHour.name")}
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    className="input input-bordered input-secondary w-full"
-                    placeholder={t("serviceHour.type")}
-                    required
-                  />
-                  <span className="text-sm">{errors.name}</span>
-                </div>
-                <div>
-                  <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                    {t("serviceHour.phone")}
-                  </label>
-                  <input
-                    id="phoneNumber"
-                    name="phoneNumber"
-                    value={formData.phoneNumber}
-                    onChange={handleInputChange}
-                    className="input input-bordered input-secondary w-full"
-                    placeholder="example: 08xx"
-                    required
-                  />
-                  <span className="text-sm">{errors.phoneNumber}</span>
-                </div>
-                <div>
-                  <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    className="input input-bordered input-secondary w-full"
-                    placeholder="example: mail@gmail.com"
-                    required
-                  />
-                  <span className="text-sm">{errors.email}</span>
-                </div>
-                <div>
-                  <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                    {t("serviceHour.message")}
-                  </label>
                   <textarea
                     id="message"
                     name="message"
