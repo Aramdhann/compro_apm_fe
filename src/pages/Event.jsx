@@ -85,7 +85,7 @@ const Event = () => {
                 {/* head */}
                 <thead className="text-lg">
                   <tr>
-                    <th></th>
+                    {/* <th></th> */}
                     <th>
                       <div className="flex items-center gap-1">
                         <MdDateRange />
@@ -122,7 +122,7 @@ const Event = () => {
                   {currentEvents.length > 0 ? (
                     currentEvents.map((item, index) => (
                       <tr key={item.id}>
-                        <td>{events.length - index}</td>
+                        {/* <td>{events.length - index}</td> */}
                         <td>{formatDate(item.date)}</td>
                         <td>{formatDate(item.end_date)}</td>
                         <td>{item.event_name}</td>
