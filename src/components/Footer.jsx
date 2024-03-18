@@ -16,7 +16,7 @@ const Footer = () => {
   const { t } = useTranslation();
 
   return (
-    <Suspense fallback={'Loading...'}>
+    <Suspense fallback={"Loading..."}>
       <div className="bg-primary text-white">
         <footer className="footer p-10 container mx-auto">
           <nav>
@@ -27,7 +27,15 @@ const Footer = () => {
               <header className="footer-title text-xl text-dope">
                 {t("footer.office")}
               </header>
-              <iframe className="flex w-full md:w-56 h-36 rounded-xl" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.130251366623!2d106.82313247503792!3d-6.246561293741827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f392847d65ff%3A0xcab14eb959e498dd!2sCashcepat%20-%20Fintech%20P2P%20Lending!5e0!3m2!1sid!2sid!4v1700621447135!5m2!1sid!2sid" width="400" height="300" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+              <iframe
+                className="flex w-full md:w-56 h-36 rounded-xl"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.130251366623!2d106.82313247503792!3d-6.246561293741827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f392847d65ff%3A0xcab14eb959e498dd!2sCashcepat%20-%20Fintech%20P2P%20Lending!5e0!3m2!1sid!2sid!4v1700621447135!5m2!1sid!2sid"
+                width="400"
+                height="300"
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
               <p className="text-sm md:text-base py-2">
                 Blue Bird Office Park 6th Floor, Jalan Mampang Prapatan No. 15
               </p>
@@ -126,10 +134,10 @@ const Footer = () => {
             <div className="flex flex-col gap-5">
               <div className="flex grow">
                 <div>
-                  <p className="mb-2 footer-title text-dope">
+                  <p className="mb-2 text-white bg-secondary font-bold px-3 rounded-md">
                     {t("trusted.ojk")}
                   </p>
-                  <img src={logo_ojk} alt="logo OJK" className="h-12 md:h-8" />
+                  {/* <img src={logo_ojk} alt="logo OJK" className="h-12 md:h-8" /> */}
                 </div>
               </div>
               <div className="flex grow">

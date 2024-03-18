@@ -20,7 +20,7 @@ const navbar = () => {
         const response = await axios.get(
           `${import.meta.env.VITE_API_URL}tkb/get/latest`
         );
-        const getLatestTkb = response.data
+        const getLatestTkb = response.data;
         setTkbValue(getLatestTkb);
       } catch (error) {
         console.error(error);
@@ -125,8 +125,14 @@ const navbar = () => {
                   className="h-10 md:h-[35px]"
                 />
               </a>
-              <a href="https://www.ojk.go.id/id/" className="flex items-center">
-                <img src={logo_ojk} alt="Logo OJK" className="w-20 md:w-16" />
+              <a
+                href="https://www.ojk.go.id/id/"
+                className="flex items-center text-sm"
+              >
+                Berizin dan
+                <br />
+                Diawasi OJK
+                {/* <img src={logo_ojk} alt="Logo OJK" className="w-20 md:w-16" /> */}
               </a>
               <a href="https://afpi.or.id/" className="flex items-center">
                 <img src={logo_afpi} alt="Logo AFPI" className="w-20 md:w-16" />

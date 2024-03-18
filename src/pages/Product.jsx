@@ -41,7 +41,10 @@ const Product = () => {
     console.log("Sending data to backend:", formData);
 
     axios
-      .post(`${import.meta.env.VITE_API_URL}simulation-product/post/all`, formData)
+      .post(
+        `${import.meta.env.VITE_API_URL}simulation-product/post/all`,
+        formData
+      )
       .then((res) => {
         console.log("Data sent successfully: ", res.data);
       })
@@ -131,25 +134,15 @@ const Product = () => {
               {t("product.description")}
             </p>
             <div className="flex flex-wrap gap-8">
-              <div className="flex flex-col gap-8">
+              <div>
                 <div>
-                  <div>
-                    <p className="mb-2 footer-title text-dope">
-                      {t("trusted.ojk")}
-                    </p>
-                    <img src={logo_ojk} alt="logo OJK" className="h-12" />
-                  </div>
-                </div>
-                <div>
-                  <div>
-                    <p className="mb-2 footer-title text-dope">
-                      {t("trusted.afpi")}
-                    </p>
-                    <img src={logo_iso} alt="logo iso" className="h-12" />
-                  </div>
+                  <p className="mb-2 text-white bg-primary font-bold px-3 rounded-md">
+                    {t("trusted.ojk")}
+                  </p>
+                  {/* <img src={logo_ojk} alt="logo OJK" className="h-12" /> */}
                 </div>
               </div>
-              <div className="flex flex-col gap-8">
+              <div className="flex flex-wrap gap-8">
                 <div>
                   <div>
                     <p className="mb-2 footer-title text-dope">
@@ -163,6 +156,14 @@ const Product = () => {
                         className="h-12"
                       />
                     </div>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <p className="mb-2 footer-title text-dope">
+                      {t("trusted.afpi")}
+                    </p>
+                    <img src={logo_iso} alt="logo iso" className="h-12" />
                   </div>
                 </div>
                 <div>

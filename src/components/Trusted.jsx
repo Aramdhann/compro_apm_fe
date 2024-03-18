@@ -1,4 +1,4 @@
-import React, {Suspense} from "react";
+import React, { Suspense } from "react";
 import logo_ojk from "../assets/ojk-new.svg";
 import logo_afpi from "../assets/afpi-new-logo.svg";
 import logo_legal from "../assets/legal_afpi.svg";
@@ -10,17 +10,17 @@ const Trusted = () => {
   const { t } = useTranslation();
 
   return (
-    <Suspense fallback={'Loading...'}>
-      <div className="flex justify-center bg-abu">
-        <div className="flex flex-wrap container border py-3">
-          <div className="flex grow p-5 mx-7 justify-center">
-            <div>
-              <p className="text-center mb-2 footer-title text-dope">
-                {t("trusted.ojk")}
-              </p>
-              <img src={logo_ojk} alt="logo OJK" className="h-12" />
-            </div>
+    <Suspense fallback={"Loading..."}>
+      <div className="flex flex-col justify-center items-center bg-abu">
+        <div className="flex grow p-5 mx-7 justify-center">
+          <div>
+            <p className="text-center mb-2 text-white bg-primary font-bold px-3 rounded-md">
+              {t("trusted.ojk")}
+            </p>
+            {/* <img src={logo_ojk} alt="logo OJK" className="h-12" /> */}
           </div>
+        </div>
+        <div className="flex flex-wrap container py-3">
           <div className="flex grow p-5 mx-7 justify-center">
             <div>
               <p className="text-center mb-2 footer-title text-dope">
