@@ -146,7 +146,7 @@ const Product = () => {
                 <div>
                   <div>
                     <p className="mb-2 footer-title text-dope">
-                      {t("trusted.iso")}
+                      {t("trusted.afpi")}
                     </p>
                     <div className="flex flex-row gap-5">
                       <img src={logo_afpi} alt="logo afpi" className="h-12" />
@@ -161,7 +161,7 @@ const Product = () => {
                 <div>
                   <div>
                     <p className="mb-2 footer-title text-dope">
-                      {t("trusted.afpi")}
+                      {t("trusted.iso")}
                     </p>
                     <img src={logo_iso} alt="logo iso" className="h-16" />
                   </div>
