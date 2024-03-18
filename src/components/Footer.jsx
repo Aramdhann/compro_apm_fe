@@ -7,7 +7,7 @@ import logo_cashcepat from "../assets/logo_cashcepat.svg";
 import logo_ojk from "../assets/ojk-new.svg";
 import logo_afpi from "../assets/afpi-new-logo.svg";
 import logo_legal from "../assets/legal_afpi.svg";
-import logo_iso from "../assets/iso_logo.svg";
+import logo_iso from "../assets/ISO_27001.png";
 import logo_kominfo from "../assets/kominfo_logo.svg";
 import { useTranslation } from "react-i18next";
 import { Suspense } from "react";
@@ -164,7 +164,7 @@ const Footer = () => {
                   <p className="mb-2 footer-title text-dope">
                     {t("trusted.iso")}
                   </p>
-                  <img src={logo_iso} alt="logo iso" className="h-12 md:h-8" />
+                  <img src={logo_iso} alt="logo iso" className="h-18 md:h-12" />
                 </div>
               </div>
               <div className="flex grow">
